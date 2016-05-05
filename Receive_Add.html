@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>發票-搜尋</title>
+    <title>收款-新增</title>
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
 
@@ -61,15 +61,15 @@
         <li role="presentation"><a href="./Sales_Quotation_Add.html">詢價</a></li>
         <li role="presentation"><a href="./Sales_Order_Add.html">訂單</a></li>
         <li role="presentation"><a href="./Delivery_Add.html">出貨</a></li>
-        <li role="presentation" class="active"><a>發票</a></li>
-        <li role="presentation"><a href="./Receive_Add.html">收款</a></li>
+        <li role="presentation"><a href="./Receive_Invoice_Add.html">發票</a></li>
+        <li role="presentation" class="active"><a>收款</a></li>
         <li role="presentation"><a href="#return">退貨</a></li>
         <div class="col-lg-3">
-          <a class="btn btn-secondary btn-sm" disabled>
+          <a href="./Receive_Search.html" class="btn btn-primary btn-sm">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             查詢
           </a>
-          <a href="./Receive_Invoice_Add.html" class="btn btn-primary btn-sm">
+          <a class="btn btn-secondary btn-sm" disabled>
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             新增
           </a>
@@ -115,11 +115,11 @@
         </div><!-- /.col-lg-6 -->
         <div class="col-lg-3">
           <div class="input-group">
-            <span class="input-group-addon">發票日期</span>
+            <span class="input-group-addon">收款日期</span>
             <input type="text" class="form-control" placeholder="Invoice Date">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
-        <div class="col-lg-2">
+        <div class="col-lg-3">
           <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 付款方式 <span class="caret"></span>
             </button>
@@ -129,51 +129,94 @@
           </ul>
           </div>
         </div><!-- /.col-lg-6 -->
-        <div class="col-lg-1">
-          <button type="button" class="btn btn-primary btn-sm">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-            搜尋
-          </button>
-        </div>
       </div><!-- /.row -->
 
       <div class="input-group input-group-sm"></div>
       <table class="table">
         <thead>
           <tr>
-            <th>發票號碼</th>
-            <th>出貨編號</th>
-            <th>發票日期</th>
-            <th>付款方式</th>
-            <th>訂單編號</th>
-            <th>訂單總金額</th>
-            <th>備註</th>
-            <th>查看</th>
+            <th>列</th>
+            <th>商品編號</th>
+            <th>商品名稱</th>
+            <th>數量</th>
+            <th>單位</th>
+            <th>單價</th>
+            <th>折扣 %</th>
+            <th>稅率 %</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            
+            <td>1</td>
+            <td><input type="text" class="form-control" placeholder="00001" name="Product_id[]"></td>
+            <td><input type="text" class="form-control" placeholder="胡椒鹽" ></td>
+            <td><input type="text" class="form-control" placeholder="2" name="Qty[]"></td>
+            <td><input type="text" class="form-control" placeholder="KG"></td>
+            <td><input type="text" class="form-control" placeholder="500" name="UnitPrice[]"></td>
+            <td><input type="text" class="form-control" placeholder="0.1" name="Discount[]"></td>
+            <td><input type="text" class="form-control" placeholder="0.05" name="Tax[]"></td>
           </tr>
 <!-- Haven't changed below for javascript start  -->
 
           <tr>
-            <!-- 第1列 -->
+            <td>2</td>
+            <td><input type="text" class="form-control" placeholder="" name="Product_id[]"></td>
+            <td><input type="text" class="form-control" placeholder="" ></td>
+            <td><input type="text" class="form-control" placeholder="" name="Qty[]"></td>
+            <td><input type="text" class="form-control" placeholder=""></td>
+            <td><input type="text" class="form-control" placeholder="500" name="UnitPrice[]"></td>
+            <td><input type="text" class="form-control" placeholder="0.1" name="Discount[]"></td>
+            <td><input type="text" class="form-control" placeholder="0.05" name="Tax[]"></td>
           </tr>
           <tr>
-            <!-- 第2列 -->
+            <td>3</td>
+            <td><input type="text" class="form-control" placeholder="" name="Product_id[]"></td>
+            <td><input type="text" class="form-control" placeholder="" ></td>
+            <td><input type="text" class="form-control" placeholder="" name="Qty[]"></td>
+            <td><input type="text" class="form-control" placeholder=""></td>
+            <td><input type="text" class="form-control" placeholder="500" name="UnitPrice[]"></td>
+            <td><input type="text" class="form-control" placeholder="0.1" name="Discount[]"></td>
+            <td><input type="text" class="form-control" placeholder="0.05" name="Tax[]"></td>
           </tr>
           <tr>
-            <!-- 第3列 -->
+            <td>4</td>
+            <td><input type="text" class="form-control" placeholder="" name="Product_id[]"></td>
+            <td><input type="text" class="form-control" placeholder="" ></td>
+            <td><input type="text" class="form-control" placeholder="" name="Qty[]"></td>
+            <td><input type="text" class="form-control" placeholder=""></td>
+            <td><input type="text" class="form-control" placeholder="" name="UnitPrice[]"></td>
+            <td><input type="text" class="form-control" placeholder="" name="Discount[]"></td>
+            <td><input type="text" class="form-control" placeholder="" name="Tax[]"></td>
           </tr>
           <tr>
-            <!-- 第5列 -->
+            <td>5</td>
+            <td><input type="text" class="form-control" placeholder="" name="Product_id[]"></td>
+            <td><input type="text" class="form-control" placeholder="" ></td>
+            <td><input type="text" class="form-control" placeholder="" name="Qty[]"></td>
+            <td><input type="text" class="form-control" placeholder=""></td>
+            <td><input type="text" class="form-control" placeholder="" name="UnitPrice[]"></td>
+            <td><input type="text" class="form-control" placeholder="" name="Discount[]"></td>
+            <td><input type="text" class="form-control" placeholder="" name="Tax[]"></td>
           </tr>
           <tr>
-            <!-- 第6列 -->
+            <td>6</td>
+            <td><input type="text" class="form-control" placeholder="" name="Product_id[]"></td>
+            <td><input type="text" class="form-control" placeholder="" ></td>
+            <td><input type="text" class="form-control" placeholder="" name="Qty[]"></td>
+            <td><input type="text" class="form-control" placeholder=""></td>
+            <td><input type="text" class="form-control" placeholder="" name="UnitPrice[]"></td>
+            <td><input type="text" class="form-control" placeholder="" name="Discount[]"></td>
+            <td><input type="text" class="form-control" placeholder="" name="Tax[]"></td>
           </tr>
           <tr>
-            <!-- 第7列 -->
+            <td>7</td>
+            <td><input type="text" class="form-control" placeholder="" name="Product_id[]"></td>
+            <td><input type="text" class="form-control" placeholder="" ></td>
+            <td><input type="text" class="form-control" placeholder="" name="Qty[]"></td>
+            <td><input type="text" class="form-control" placeholder=""></td>
+            <td><input type="text" class="form-control" placeholder="" name="UnitPrice[]"></td>
+            <td><input type="text" class="form-control" placeholder="" name="Discount[]"></td>
+            <td><input type="text" class="form-control" placeholder="" name="Tax[]"></td>
           </tr>
 
 <!-- Haven't changed below for javascript end  -->
@@ -181,6 +224,19 @@
         </tbody>
       </table>
 
+      <div class="col-lg-3">
+      </div><!-- /.col-lg-6 -->
+      <div class="col-lg-5"></div>
+      <div class="col-lg-2">
+      </div><!-- /.col-lg-6 -->
+      <div class="col-lg-2">
+        <button type="button" class="btn btn-default">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          儲存收款單
+        </button>
+      </div><!-- /.col-lg-6 -->
+
+      <h3>.</h3>
 
     </div><!-- /.container -->
 

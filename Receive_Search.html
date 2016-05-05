@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>銷貨訂單-搜尋</title>
+    <title>收款-新增</title>
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
 
@@ -59,17 +59,17 @@
     <nav class="navbar">
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="./Sales_Quotation_Add.html">詢價</a></li>
-        <li role="presentation" class="active"><a>訂單</a></li>
+        <li role="presentation"><a href="./Sales_Order_Add.html">訂單</a></li>
         <li role="presentation"><a href="./Delivery_Add.html">出貨</a></li>
         <li role="presentation"><a href="./Receive_Invoice_Add.html">發票</a></li>
-        <li role="presentation"><a href="./Receive_Add.html">收款</a></li>
+        <li role="presentation" class="active"><a>收款</a></li>
         <li role="presentation"><a href="#return">退貨</a></li>
         <div class="col-lg-3">
           <a class="btn btn-secondary btn-sm" disabled>
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             查詢
           </a>
-          <a href="./Sales_Order_Add.html" class="btn btn-primary btn-sm">
+          <a href="./Receive_Add.html" class="btn btn-primary btn-sm">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             新增
           </a>
@@ -82,32 +82,50 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="input-group">
-            <span class="input-group-addon">客戶編號</span>
-            <input type="text" class="form-control" placeholder="Customer ID">
+            <span class="input-group-addon">訂單總金額</span>
+            <input type="text" class="form-control" placeholder="Total">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
         <div class="col-lg-3">
           <div class="input-group">
-            <span class="input-group-addon">客戶名稱</span>
-            <input type="text" class="form-control" placeholder="張三">
+            <span class="input-group-addon">訂單編號</span>
+            <input type="text" class="form-control" placeholder="Order ID">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
         <div class="col-lg-3">
           <div class="input-group">
-            <span class="input-group-addon">客戶電話</span>
-            <input type="text" class="form-control" placeholder="023456789">
+            <span class="input-group-addon">出貨編號</span>
+            <input type="text" class="form-control" placeholder="Deli ID">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-3">
+          <div class="input-group">
+            <span class="input-group-addon">發票號碼</span>
+            <input type="text" class="form-control" placeholder="Receipt ID">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon">備註</span>
+            <input type="text" class="form-control" placeholder="Remarks">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-3">
+          <div class="input-group">
+            <span class="input-group-addon">收款日期</span>
+            <input type="text" class="form-control" placeholder="Invoice Date">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
         <div class="col-lg-2">
           <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 選擇送貨方式 <span class="caret"></span>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 付款方式 <span class="caret"></span>
             </button>
           <ul class="dropdown-menu">
-            <li><a href="#">貨到後付款</a></li>
-            <li><a href="#">客戶自行提貨</a></li>
-            <li><a href="#">先付款後取貨</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">現場購買 / 一次性客戶</a></li>
+            <li><a href="#">現金</a></li>
+            <li><a href="#">轉帳</a></li>
           </ul>
           </div>
         </div><!-- /.col-lg-6 -->
@@ -119,45 +137,18 @@
         </div>
       </div><!-- /.row -->
 
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="input-group">
-            <span class="input-group-addon">訂單編號</span>
-            <input type="text" class="form-control" placeholder="Order ID">
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-        <div class="col-lg-3">
-          <div class="input-group">
-            <span class="input-group-addon">下訂日期</span>
-            <input type="text" class="form-control" placeholder="2016/01/01">
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-        <div class="col-lg-3">
-          <div class="input-group">
-            <span class="input-group-addon">送貨截止日</span>
-            <input type="text" class="form-control" placeholder="2016/02/01">
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-        <div class="col-lg-3">
-          <div class="input-group">
-            <span class="input-group-addon">送貨地址</span>
-            <input type="text" class="form-control" placeholder="10048 臺北市中正區重慶南路1段122號">
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-      </div><!-- /.row -->
-
       <div class="input-group input-group-sm"></div>
       <table class="table">
         <thead>
           <tr>
+            <th>列</th>
             <th>訂單編號</th>
-            <th>客戶名稱</th>
-            <th>客戶電話</th>
-            <th>下訂日期</th>
-            <th>送貨截止日</th>
-            <th>送貨地址</th>
-            <th>送貨方式</th>
-            <th>總金額</th>
+            <th>訂單總金額</th>
+            <th>出貨編號</th>
+            <th>發票號碼</th>
+            <th>收款日期</th>
+            <th>付款方式</th>
+            <th>備註</th>
             <th>查看</th>
           </tr>
         </thead>
